@@ -38,7 +38,7 @@ function showPage(list, page) {
 
 /*
 The addPagination function adds buttons to the bottom of the page to navigate through all students.
-This function also sets the active class to the current page button selected.
+This function also sets the active class on the current page button selected.
 Additionally, this function automatically scrolls to the top of the page when clicking through to a new page.
 */
 function addPagination(list) {
@@ -64,27 +64,27 @@ function addPagination(list) {
 }
 
 
-// Call functions
+// Call functions to display data on the page and add pagination buttons.
 
 showPage(data, 1);
 addPagination(data);
 
-// These lines add a search box with the class student search and insert it adjacent to the Header element.
+// These lines add a search box with the class "student-search" and inserts it adjacent to the Header element.
 
 let studentSearch = `<div id="student-search" class="student-search">
 <input type="text" id="search" placeholder="Search by name...">
-<button type="submit" class="submit"><img src="img/icn-search.svg" alt="search button"></button>
+<button type="submit" class="submit"><img src="img/icn-search.svg" alt="search submit button"></button>
 `;
 
 header.insertAdjacentHTML('beforeend', studentSearch);
 
-// This declares the value of searchInput and searchEvent to be used in the following functions and event listeners.
+// The variables declare the value of searchInput and searchEvent to be used in the following functions and event listeners.
 
 const searchInput = document.getElementById('search');
 const searchEvent = document.getElementById('student-search');
 
 /*
-The searchStudents function creates an empty array for filtered (searched) results.
+The searchStudents function creates an empty array for filtered results.
 It loops through the student names and checks whether any names in the data array match with the value of the search input.
 If a match is found, the student(s) are displayed and the page numbers are updated accordingly.
 If no match is found, a "no results" message is displayed.
@@ -109,7 +109,6 @@ function searchStudents(searchInput) {
 The following code adds two event listeners to the page so as someone types in the search bar,
 or hits enter/clicks the search submit button, the searchStudents function is called and results are displayed. 
 */
-
 
 searchEvent.addEventListener('keyup', () => {
   searchStudents(searchInput.value);
