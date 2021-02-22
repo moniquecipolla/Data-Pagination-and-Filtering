@@ -84,9 +84,10 @@ let studentSearch = `<label id="student-search" class="student-search">
 
 header.insertAdjacentHTML('beforeend', studentSearch);
 
-// These variables declare the values of searchInput, searchEvent, and clearSearch to be used in the following functions and event listeners.
+// These variables declare the values of searchInput, searchEvent, searchButton, and clearSearch to be used in the following functions and event listeners.
 const searchInput = document.getElementById('search');
 const searchEvent = document.getElementById('student-search');
+const searchButton = document.querySelector('button[type=button]');
 const clearSearch = document.querySelector('button[type=clear]');
 
 /*
@@ -123,12 +124,16 @@ The following code adds three event listeners to the page so as someone types in
 or hits enter/clicks the search submit button, the searchStudents function is called and results are displayed. 
 The third calls the clearSerchText function to clear input and return to the first page.
 */
+
+
 searchEvent.addEventListener('keyup', () => {
   searchStudents(searchInput.value);
 });
 
-searchEvent.addEventListener('submit', () => {
-  searchStudents(searchInput.value);
+
+
+searchButton.addEventListener('click', () => {
+   searchStudents(searchInput.value);
 });
 
 clearSearch.addEventListener('click', () => {
