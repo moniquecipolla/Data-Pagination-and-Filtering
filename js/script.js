@@ -64,8 +64,7 @@ function addPagination(list) {
 }
 
 
-// Call functions to display data on the page and add pagination buttons.
-
+// Call functions to display data from data.js on the page and add pagination buttons.
 showPage(data, 1);
 addPagination(data);
 
@@ -74,7 +73,6 @@ These lines add a variable that creates search box.
 They also add a clear search button.
 The variable is then inserted adjacent to the page header.
 */
-
 let studentSearch = `<div id="student-search" class="student-search">
 <input type="text" id="search" placeholder="Search by name...">
 <button type="submit" class="submit"><img src="img/icn-search.svg" alt="search submit button"></button>
@@ -87,7 +85,6 @@ let studentSearch = `<div id="student-search" class="student-search">
 header.insertAdjacentHTML('beforeend', studentSearch);
 
 // These variables declare the values of searchInput, searchEvent, and clearSearch to be used in the following functions and event listeners.
-
 const searchInput = document.getElementById('search');
 const searchEvent = document.getElementById('student-search');
 const clearSearch = document.getElementById('clear-search');
@@ -99,7 +96,6 @@ If a match is found, the student(s) are displayed and the page numbers are updat
 If no match is found, a "no results" message is displayed.
 The clearSearchText function clears the value of the search input and brings the user back to the first page.
 */
-
 function searchStudents(searchInput) {
   let filteredResults = [];
   for(let i = 0; i < data.length; i++){
@@ -127,7 +123,6 @@ The following code adds three event listeners to the page so as someone types in
 or hits enter/clicks the search submit button, the searchStudents function is called and results are displayed. 
 The third calls the clearSerchText function to clear input and return to the first page.
 */
-
 searchEvent.addEventListener('keyup', () => {
   searchStudents(searchInput.value);
 });
