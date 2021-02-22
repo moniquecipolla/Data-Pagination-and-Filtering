@@ -77,7 +77,7 @@ let studentSearch = `<label id="student-search" class="student-search">
 <input type="text" id="search" placeholder="Search by name...">
 <button type="search"><img src="img/icn-search.svg" alt="search submit button"></button>
 </label>
-<div id="clear-search" class="clear-search">
+<div class="clear-search">
 &nbsp;
 <button type="clear">Clear search</button>
 `;
