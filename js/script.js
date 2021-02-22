@@ -124,8 +124,6 @@ The following code adds three event listeners to the page so as someone types in
 or hits enter/clicks the search submit button, the searchStudents function is called and results are displayed. 
 The third calls the clearSerchText function to clear input and return to the first page.
 */
-
-
 searchEvent.addEventListener('keyup', () => {
   searchStudents(searchInput.value);
 });
