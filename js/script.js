@@ -69,7 +69,11 @@ function addPagination(list) {
 showPage(data, 1);
 addPagination(data);
 
-// These lines add a search box with the class "student-search" and inserts it adjacent to the Header element.
+/*
+These lines add a variable that creates search box with the class "student-search".
+They also add a clear search button with the class "clear-search."
+The variable is then inserted adjacent to the page header.
+*/
 
 let studentSearch = `<div id="student-search" class="student-search">
 <input type="text" id="search" placeholder="Search by name...">
