@@ -73,13 +73,13 @@ These lines add a variable that creates search box.
 They also add a clear search button.
 The variable is then inserted adjacent to the page header.
 */
-let studentSearch = `<div id="student-search" class="student-search">
+let studentSearch = `<label id="student-search" class="student-search">
 <input type="text" id="search" placeholder="Search by name...">
-<button type="submit" class="submit"><img src="img/icn-search.svg" alt="search submit button"></button>
-</div>
+<button type="button"><img src="img/icn-search.svg" alt="search submit button"></button>
+</label>
 <div id="clear-search" class="clear-search">
 &nbsp;
-<button type="clear" class="clear">Clear search</button>
+<button type="clear">Clear search</button>
 `;
 
 header.insertAdjacentHTML('beforeend', studentSearch);
@@ -87,7 +87,7 @@ header.insertAdjacentHTML('beforeend', studentSearch);
 // These variables declare the values of searchInput, searchEvent, and clearSearch to be used in the following functions and event listeners.
 const searchInput = document.getElementById('search');
 const searchEvent = document.getElementById('student-search');
-const clearSearch = document.getElementById('clear-search');
+const clearSearch = document.querySelector('button[type=clear]');
 
 /*
 The searchStudents function creates an empty array for filtered results.
