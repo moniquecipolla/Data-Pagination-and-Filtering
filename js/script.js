@@ -74,20 +74,26 @@ addPagination(data);
 let studentSearch = `<div id="student-search" class="student-search">
 <input type="text" id="search" placeholder="Search by name...">
 <button type="submit" class="submit"><img src="img/icn-search.svg" alt="search submit button"></button>
+</div>
+<div id="clear-search" class="clear-search">
+&nbsp;
+<button type="clear" class="clear">Clear search</button>
 `;
 
 header.insertAdjacentHTML('beforeend', studentSearch);
 
-// The variables declare the value of searchInput and searchEvent to be used in the following functions and event listeners.
+// These variables declare the value of searchInput and searchEvent to be used in the following functions and event listeners.
 
 const searchInput = document.getElementById('search');
 const searchEvent = document.getElementById('student-search');
+const clearSearch = document.getElementById('clear-search');
 
 /*
 The searchStudents function creates an empty array for filtered results.
 It loops through the student names and checks whether any names in the data array match with the value of the search input.
-If a match is found, the student(s) are displayed and the page numbers are updated accordingly.
+If a match is found, the student(s) are displayed and the page numbers are updated accordingly by calling the relevant functions.
 If no match is found, a "no results" message is displayed.
+The clearSearchText function clears the value of the search input and brings the user back to the main page.
 */
 
 function searchStudents(searchInput) {
@@ -102,18 +108,30 @@ function searchStudents(searchInput) {
       }
       if (filteredResults.length === 0) {
         studentList.innerHTML = `<li class="student-item cf">No matching results found.</li>`;
+        addPagination(filteredResults);
       }
    }
+  
+function clearSearchText() {
+  searchInput.value = '';
+  showPage(data, 1)
+  addPagination(data);
+}
 
 /*
-The following code adds two event listeners to the page so as someone types in the search bar,
+The following code adds three event listeners to the page so as someone types in the search bar,
 or hits enter/clicks the search submit button, the searchStudents function is called and results are displayed. 
+The third clears the search input and brings the user back to the main page.
 */
 
-searchEvent.addEventListener('keyup', () => {
+searchEvent.addEventListener('keyup', (event) => {
   searchStudents(searchInput.value);
 });
 
-searchEvent.addEventListener('submit', () => {
+searchEvent.addEventListener('submit', (event) => {
   searchStudents(searchInput.value);
+});
+
+clearSearch.addEventListener('click', (event) => {
+  clearSearchText();
 });
