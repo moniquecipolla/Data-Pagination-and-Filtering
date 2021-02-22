@@ -99,7 +99,7 @@ The clearSearchText function clears the value of the search input and brings the
 */
 function searchStudents(searchInput) {
   let filteredResults = [];
-  for(let i = 0; i < data.length; i++){
+  for(let i = 0; i < data.length; i++) {
       let fullName = `${data[i].name.first} ${data[i].name.last}`
       if(fullName.toLowerCase().includes(searchInput.toLowerCase())) {
         filteredResults.push(data[i]);
