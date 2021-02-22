@@ -70,8 +70,8 @@ showPage(data, 1);
 addPagination(data);
 
 /*
-These lines add a variable that creates search box with the class "student-search".
-They also add a clear search button with the class "clear-search."
+These lines add a variable that creates search box.
+They also add a clear search button.
 The variable is then inserted adjacent to the page header.
 */
 
@@ -125,7 +125,7 @@ function clearSearchText() {
 /*
 The following code adds three event listeners to the page so as someone types in the search bar,
 or hits enter/clicks the search submit button, the searchStudents function is called and results are displayed. 
-The third clears the search input when the user clicks the clearSearch button and brings the user back to the main page.
+The third clears calls the clearSerchText function to clear input and return to the first page.
 */
 
 searchEvent.addEventListener('keyup', () => {
