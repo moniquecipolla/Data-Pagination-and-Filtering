@@ -103,7 +103,7 @@ function searchStudents(searchInput) {
       let fullName = `${data[i].name.first} ${data[i].name.last}`
       if (fullName.toLowerCase().includes(searchInput.toLowerCase())) {
         filteredResults.push(data[i]);
-        showPage(filteredResults, 1)
+        showPage(filteredResults, 1);
         addPagination(filteredResults);
         }
       }
@@ -115,7 +115,7 @@ function searchStudents(searchInput) {
 
 function clearSearchText() {
   searchInput.value = '';
-  showPage(data, 1)
+  showPage(data, 1);
   addPagination(data);
 }
 
