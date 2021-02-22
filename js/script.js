@@ -75,7 +75,7 @@ The variable is then inserted adjacent to the page header.
 */
 let studentSearch = `<label id="student-search" class="student-search">
 <input type="text" id="search" placeholder="Search by name...">
-<button type="button"><img src="img/icn-search.svg" alt="search submit button"></button>
+<button type="search"><img src="img/icn-search.svg" alt="search submit button"></button>
 </label>
 <div id="clear-search" class="clear-search">
 &nbsp;
@@ -87,7 +87,7 @@ header.insertAdjacentHTML('beforeend', studentSearch);
 // These variables declare the values of searchInput, searchEvent, searchButton, and clearSearch to be used in the following functions and event listeners.
 const searchInput = document.getElementById('search');
 const searchEvent = document.getElementById('student-search');
-const searchButton = document.querySelector('button[type=button]');
+const searchButton = document.querySelector('button[type=search]');
 const clearSearch = document.querySelector('button[type=clear]');
 
 /*
