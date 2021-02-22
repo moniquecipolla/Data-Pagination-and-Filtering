@@ -112,7 +112,7 @@ function searchStudents(searchInput) {
         addPagination(filteredResults);
       }
    }
-  
+   
 function clearSearchText() {
   searchInput.value = '';
   showPage(data, 1)
