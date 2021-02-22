@@ -131,7 +131,6 @@ searchEvent.addEventListener('keyup', () => {
 });
 
 
-
 searchButton.addEventListener('click', () => {
    searchStudents(searchInput.value);
 });
