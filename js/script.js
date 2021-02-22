@@ -15,7 +15,7 @@ This shows student information such as name, email, registered date, etc.
 function showPage(list, page) {
   const startIndex = ((page * itemsPerPage) - itemsPerPage);
   const endIndex = (page * itemsPerPage);
-  studentList.textContent = '';
+  studentList.innerHTML = '';
   for (let i = 0; i < list.length; i++) {
     if (i >= startIndex && i < endIndex) {
       const studentItem = `<li class="student-item cf">
