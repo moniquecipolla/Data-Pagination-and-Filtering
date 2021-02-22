@@ -128,7 +128,6 @@ searchEvent.addEventListener('keyup', () => {
   searchStudents(searchInput.value);
 });
 
-
 searchButton.addEventListener('click', () => {
    searchStudents(searchInput.value);
 });
