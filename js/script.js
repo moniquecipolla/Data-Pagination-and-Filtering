@@ -82,7 +82,7 @@ let studentSearch = `<div id="student-search" class="student-search">
 
 header.insertAdjacentHTML('beforeend', studentSearch);
 
-// These variables declare the value of searchInput, searchEvent, and clearSearch to be used in the following functions and event listeners.
+// These variables declare the values of searchInput, searchEvent, and clearSearch to be used in the following functions and event listeners.
 
 const searchInput = document.getElementById('search');
 const searchEvent = document.getElementById('student-search');
@@ -93,7 +93,7 @@ The searchStudents function creates an empty array for filtered results.
 It loops through the student names and checks whether any names in the data array match with the value of the search input.
 If a match is found, the student(s) are displayed and the page numbers are updated accordingly by calling the relevant functions.
 If no match is found, a "no results" message is displayed.
-The clearSearchText function clears the value of the search input and brings the user back to the main page.
+The clearSearchText function clears the value of the search input and brings the user back to the first page.
 */
 
 function searchStudents(searchInput) {
@@ -121,17 +121,17 @@ function clearSearchText() {
 /*
 The following code adds three event listeners to the page so as someone types in the search bar,
 or hits enter/clicks the search submit button, the searchStudents function is called and results are displayed. 
-The third clears the search input and brings the user back to the main page.
+The third clears the search input when the user clicks the clearSearch button snd brings the user back to the main page.
 */
 
-searchEvent.addEventListener('keyup', (event) => {
+searchEvent.addEventListener('keyup', () => {
   searchStudents(searchInput.value);
 });
 
-searchEvent.addEventListener('submit', (event) => {
+searchEvent.addEventListener('submit', () => {
   searchStudents(searchInput.value);
 });
 
-clearSearch.addEventListener('click', (event) => {
+clearSearch.addEventListener('click', () => {
   clearSearchText();
 });
