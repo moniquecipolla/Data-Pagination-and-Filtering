@@ -82,7 +82,7 @@ let studentSearch = `<div id="student-search" class="student-search">
 
 header.insertAdjacentHTML('beforeend', studentSearch);
 
-// These variables declare the value of searchInput and searchEvent to be used in the following functions and event listeners.
+// These variables declare the value of searchInput, searchEvent, and clearSearch to be used in the following functions and event listeners.
 
 const searchInput = document.getElementById('search');
 const searchEvent = document.getElementById('student-search');
